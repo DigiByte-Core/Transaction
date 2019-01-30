@@ -1,11 +1,11 @@
 {
-  "name": "digiassset-transaction",
+  "name": "digiasset-transaction",
   "version": "1.2.1",
-  "description": "The encoding/decoding functions for the colored-coins scheme issuance set of OP_CODES",
+  "description": "The encoding/decoding functions for the digiasset scheme issuance set of OP_CODES",
   "main": "Transaction.js",
   "dependencies": {
-    "digiassset-issuance-encoder": "^1.1.0",
-    "digiassset-transfer-encoder": "^1.1.0"
+    "digiasset-issuance-encoder": "^1.1.0",
+    "digiasset-transfer-encoder": "^1.1.0"
   },
   "directories": {
     "test": "test"
