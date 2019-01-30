@@ -1,11 +1,11 @@
 {
-  "name": "cc-transaction",
+  "name": "digiassset-transaction",
   "version": "1.2.1",
   "description": "The encoding/decoding functions for the colored-coins scheme issuance set of OP_CODES",
   "main": "Transaction.js",
   "dependencies": {
-    "cc-issuance-encoder": "^1.1.0",
-    "cc-transfer-encoder": "^1.1.0"
+    "digiassset-issuance-encoder": "^1.1.0",
+    "digiassset-transfer-encoder": "^1.1.0"
   },
   "directories": {
     "test": "test"
@@ -24,6 +24,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Colored-Coins/Transaction.git"
+    "url": "https://github.com/DigiByte-Core/Transaction.git"
   }
 }

@@ -5,17 +5,17 @@ var OP_CODES = {
   'issuance': {
     'start': 0x00,
     'end': 0x0f,
-    'encoder': require('cc-issuance-encoder')
+    'encoder': require('digiassset-issuance-encoder')
   },
   'transfer': {
     'start': 0x10,
     'end': 0x1f,
-    'encoder': require('cc-transfer-encoder')
+    'encoder': require('digiassset-transfer-encoder')
   },
   'burn': {
     'start': 0x20,
     'end': 0x2f,
-    'encoder': require('cc-transfer-encoder')
+    'encoder': require('digiassset-transfer-encoder')
   }
 }
 
