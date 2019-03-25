@@ -1,14 +1,14 @@
-# Colored Coins Transaction
-[![Build Status](https://travis-ci.org/Colored-Coins/Transaction.svg?branch=master)](https://travis-ci.org/Colored-Coins/Transaction) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Transaction/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Transaction?branch=master) [![npm version](https://badge.fury.io/js/cc-transaction.svg)](http://badge.fury.io/js/cc-transaction) [![Slack Status](http://slack.coloredcoins.org/badge.svg)](http://slack.coloredcoins.org)
+# DigiAsset Transaction
+[![Build Status](https://travis-ci.org/Colored-Coins/Transaction.svg?branch=master)](https://travis-ci.org/Colored-Coins/Transaction) [![Coverage Status](https://coveralls.io/repos/Colored-Coins/Transaction/badge.svg?branch=master)](https://coveralls.io/r/Colored-Coins/Transaction?branch=master) [![npm version](https://badge.fury.io/js/cc-transaction.svg)](http://badge.fury.io/js/digiasset-transaction) [![Slack Status](http://slack.coloredcoins.org/badge.svg)](http://slack.coloredcoins.org)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-Colored Coins Transaction provides the basic functionality for creating and managing a Colored Coins Transaction Object
+DigiAsset Transaction provides the basic functionality for creating and managing a DigiAssets Transaction Object
 
 ### Installation
 
 ```sh
-$ npm install cc-transaction
+$ npm install digiasset-transaction
 ```
 
 ### properties
@@ -22,7 +22,7 @@ this.noRules
 this.payments
 // [Number]
 this.protocol
-// Colored-Coins protocol version [Number]
+// DigiAssets protocol version [Number]
 this.version
 // how many places after the decimal point can the smallest asset amount be (for example divisibility 2 => smallest asset amount is 0.01) [Number]
 this.divisibility
@@ -61,7 +61,7 @@ Transaction.prototype.shiftOutputs = function(shiftAmount)
 In order to test you need to install [mocha] globaly on your machine
 
 ```sh
-$ cd /"module-path"/cc-transaction
+$ cd /"module-path"/digiasset-transaction
 $ mocha
 ```
 

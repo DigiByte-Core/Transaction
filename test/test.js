@@ -5,13 +5,13 @@ describe('Create Transaction from raw data', function () {
   this.timeout(0)
   var torrentHash = new Buffer(20)
   var sha2 = new Buffer(32)
-  var hex3 = '434301028d5e6b9e6543d917e9a1a35e3680dabc4922750c201201201210'
+  var hex3 = '414101028d5e6b9e6543d917e9a1a35e3680dabc4922750c201201201210'
   var data = {
     type: 'issuance',
     amount: 13232,     
     divisibility: 2,
     lockStatus: false,
-    protocol: 0x4343,
+    protocol: 0x4141,
     version: 0x02,
     sha2: sha2,
     torrentHash: torrentHash,
@@ -135,7 +135,7 @@ describe('Create Transaction from raw data', function () {
   })
 
   it('should encode an empty issuance transaction', function (done) {
-    transaction = Transaction.newTransaction(0x4343, 0x02)
+    transaction = Transaction.newTransaction(0x4141, 0x02)
     var a = {}
     assert.throws(function () {
       transaction.setAmount(a.c, a.d)
@@ -154,7 +154,7 @@ describe('Create Transaction from raw data', function () {
   })
 
   it('should encode a burn transaction', function (done) {
-    transaction = Transaction.newTransaction(0x4343, 0x02)
+    transaction = Transaction.newTransaction(0x4141, 0x02)
     transaction.addPayment(0, 7, 2)
     transaction.addBurn(1, 5, false)
     transactionJson1 = transaction.toJson()

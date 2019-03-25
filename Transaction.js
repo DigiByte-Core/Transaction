@@ -1,4 +1,4 @@
-var PROTOCOL = 0x4343
+var PROTOCOL = 0x4441
 var VERSION = 0x02
 var MAXBYTESIZE = 80
 var OP_CODES = {
