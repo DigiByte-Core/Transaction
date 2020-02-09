@@ -3,8 +3,8 @@ var assert = require('assert')
 
 describe('Create Transaction from raw data', function () {
   this.timeout(0)
-  var torrentHash = new Buffer(20)
-  var sha2 = new Buffer(32)
+  var torrentHash = Buffer.allocUnsafe(20)
+  var sha2 = Buffer.allocUnsafe(32)
   var hex3 = '414101028d5e6b9e6543d917e9a1a35e3680dabc4922750c201201201210'
   var data = {
     type: 'issuance',
@@ -59,7 +59,7 @@ describe('Create Transaction from raw data', function () {
       if (val.length % 2 == 1) {
         val = '0'+val
       }
-      return new Buffer(val, 'hex')
+      return Buffer.from(val, 'hex')
     }
 
     var consume = consumer(code.codeBuffer.slice(0, code.codeBuffer.length - 1))
@@ -68,7 +68,7 @@ describe('Create Transaction from raw data', function () {
     assert.deepEqual(toBuffer('01'), consume(1))  //issuance OP_CODE
     consume(20) //torrent-hash
     consume(32) //sha2
-    assert.deepEqual(new Buffer('433b00', 'hex'), consume(3))
+    assert.deepEqual(Buffer.from('433b00', 'hex'), consume(3))
     done()
   })
 
@@ -137,10 +137,10 @@ describe('Create Transaction from raw data', function () {
   it('should encode an empty issuance transaction', function (done) {
     transaction = Transaction.newTransaction(0x4141, 0x02)
     var a = {}
-    assert.throws(function () {
+    assert.throws(function () { 
       transaction.setAmount(a.c, a.d)
-    }, 'Amount has to be defined'
-    , 'Amount has to be defined')
+    }, new Error('Amount has to be defined')
+    , new Error('Amount has to be defined'))
     transaction.setLockStatus(false)
     transaction.setAmount(10, 3)
     transactionJson1 = transaction.toJson()
