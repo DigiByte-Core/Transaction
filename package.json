@@ -5,7 +5,7 @@
   "main": "Transaction.js",
   "dependencies": {
     "digiasset-issuance-encoder": "^1.3.0",
-    "digiasset-transfer-encoder": "^1.2.0"
+    "digiasset-transfer-encoder": "^1.3.0"
   },
   "directories": {
     "test": "test"
